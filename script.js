@@ -52,26 +52,34 @@ MoveBG();
 let isjump = false;
 let randomTime = 1000;
 
-document.addEventListener("keydown", (e) => {
-  if (e.code == "Space" && !isjump) {
-    randomTime = Math.random() * (3000 - 1000) + 1000;
-    isjump = true;
-    dino.style.bottom = "55vh";
+function jump() {
+  if (isjump) return;
 
+  randomTime = Math.random() * (3000 - 1000) + 1000;
+  isjump = true;
+  dino.style.bottom = "55vh";
+
+  setTimeout(() => {
+    dino.style.bottom = "38%";
     setTimeout(() => {
-      dino.style.bottom = "38%";
-      setTimeout(() => {
-        isjump = false;
-      }, 250);
-    }, 400);
-  }
+      isjump = false;
+    }, 250);
+  }, 400);
+}
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") jump();
 });
+
+document.addEventListener("touchstart", jump);
+
+document.addEventListener("click", jump);
+
 
 const GenerateObstacle = () => {
   if (!gameActive) return;
   const Obs = document.createElement("img");
   Obs.id = "ob";
-  Obs.src = "./assets/Obs.png";
+  Obs.src = "./assets/obstacle.png";
   bg.appendChild(Obs);
 
   setTimeout(() => {
