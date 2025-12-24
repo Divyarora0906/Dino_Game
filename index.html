@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dino Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="background">
+      <div class="board">
+        <img src="./assets/board.png" alt="board" id="board">
+        <div id="Score">
+          Score:
+          <span id="value">0</span>
+        </div>
+      </div>
+      <div class="Dino">
+        <img src="./assets/dinos.png" alt="Dino" id="dino" />
+      </div>
+      <div class="Ground">
+        <div class="go" id="hide">
+          <img src="./assets/gameover.png" alt="" id="BOARD" />
+          <div class="Btns">
+            <button id="Start">START</button>
+            <button id="Quit">QUIT</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

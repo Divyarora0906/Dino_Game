@@ -1,0 +1,135 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#background {
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("./assets/bg.png");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: contain;
+  overflow: hidden;
+}
+.Ground {
+  position: absolute;
+  height: 20vh;
+  width: 100vw;
+  bottom: 0px;
+  left: 0px;
+}
+.Dino {
+  height: 80px;
+  width: 50px;
+  bottom: 38%;
+  position: absolute;
+  left: 10vh;
+  z-index: 1;
+  transition: bottom 0.2s linear;
+}
+
+.Dino > img {
+  height: 120px;
+  width: 100px;
+}
+#ob {
+  height: 100px;
+  width: 140px;
+  position: absolute;
+  bottom: 32%;
+  right: -250px;
+  animation: moveObstacle 3s linear;
+}
+@keyframes moveObstacle {
+  from {
+    right: -50px;
+  }
+  to {
+    right: 100%;
+  }
+}
+#BOARD {
+  height: 300px;
+  width: 330px;
+  position: absolute;
+  z-index: 2;
+  right: 5%;
+  bottom: 120%;
+}
+.Btns {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  right: 2%;
+  bottom: 159%;
+  z-index: 5;
+}
+#Start,
+#Quit {
+  height: 37px;
+  width: 86px;
+  border: 0px;
+  outline: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 50px;
+}
+#Start {
+  background-color: lightgreen;
+}
+#Quit {
+  background-color: red;
+  color: rgb(255, 255, 255);
+}
+.go {
+  display: none;
+}
+#board {
+  height: 140px;
+}
+#Score {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  font-size: 20px;
+}
+@media (max-width: 1450px) {
+  #background {
+    background-color: red;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: url("./assets/bg.png");
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: cover;
+    overflow: hidden;
+  }
+}
+@media (max-width: 768px) {
+  #ob {
+    animation-duration: 1.4s; 
+  }
+}
+@media (max-width: 568px) {
+  #ob {
+    animation-duration: 1.2s; 
+  }
+}
+@media (max-width: 1200px) {
+  .Btns {
+    height: 100px;
+    width: 300px;
+    position: absolute;
+    right: 0%;
+    bottom: 155%;
+    z-index: 5;
+  }
+}
+@media (max-width:750px) {
+  .Btns{
+    right: -5%;
+  }
+}
