@@ -3,31 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dino Game</title>
+    <title>Dino Game 🦖</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+
   <body>
     <main id="background">
       <div class="board">
-        <img src="./assets/board.png" alt="board" id="board">
+        <img src="./assets/board.png" alt="board" id="board" />
         <div id="Score">
           Score:
           <span id="value">0</span>
         </div>
       </div>
+
       <div class="Dino">
         <img src="./assets/dinos.png" alt="Dino" id="dino" />
       </div>
-      <div class="Ground">
-        <div class="go" id="hide">
-          <img src="./assets/gameover.png" alt="" id="BOARD" />
-          <div class="Btns">
-            <button id="Start">START</button>
-            <button id="Quit">QUIT</button>
-          </div>
+
+      <div class="Ground"></div>
+    </main>
+
+    <div class="popup-overlay hidden" id="gameover-box">
+      <div class="popup">
+        <h2>GAME OVER</h2>
+        <p>Your Score: <span id="finalScore">0</span></p>
+
+        <div class="Btns">
+          <button id="Start">RESTART</button>
+          <button id="Quit">QUIT</button>
         </div>
       </div>
-    </main>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
